@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Tokens de design (docs/design-brief.md). Gera classes como bg-bg, text-ink, bg-accent-strong, font-display. */
+@theme {
+  --color-bg: #faf8f5;
+  --color-surface: #efebe5;
+  --color-white: #ffffff;
+  --color-ink: #1c1b19;
+  --color-muted: #6b6862;
+  --color-line: #ddd7cf;
+  --color-accent: #a6845c; /* só decoração ou texto grande (contraste 3,3:1) */
+  --color-accent-strong: #8a6a45;
+  --color-accent-text: #7a5c3b;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+
+  --radius-card: 1rem;
+  --radius-media: 1.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-strong);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
