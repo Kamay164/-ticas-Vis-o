@@ -112,7 +112,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Entregável: `docs/design-brief.md` curto (menos de 150 linhas).
   - Verificação: usuário lê e aprova paleta, fontes e seções. Nenhum arquivo de código criado.
 
-- [ ] **Etapa 2: Setup do projeto e primeiro deploy**
+- [x] **Etapa 2: Setup do projeto e primeiro deploy**
   - Fazer: criar projeto Vite + React + Tailwind, `.gitignore`, `README.md` inicial, tokens de design e fontes, `site.js` com dados fictícios, página mínima que renderiza.
   - Verificação: `npm install`, `npm run dev` abre sem erros e `npm run build` termina sem erros. Usuário faz o primeiro push e conecta o repositório na Vercel.
 
@@ -233,5 +233,7 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 
 - Planejamento: aprovado.
 - Etapa 1: concluída e aprovada (`docs/design-brief.md`).
-- Etapa 2: entregue (projeto Vite + React + Tailwind v4, tokens, `site.js`, build e lint ok), **aguardando aprovação do usuário** e o primeiro push/deploy.
+- Etapa 2: concluída e aprovada.
+- Etapa 3: entregue (Header com menu mobile, Hero com ilustração no lugar da foto, Footer, botão flutuante de WhatsApp, seções temporárias com as âncoras), **aguardando aprovação do usuário**.
+- Pendente: plano de imagens (fotos ainda não escolhidas; `hero.image` em `site.js` está `null`).
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.

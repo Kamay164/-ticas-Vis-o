@@ -1,25 +1,42 @@
-import { site, whatsappLink } from './data/site'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
+
+// Seções temporárias: mantêm as âncoras do menu funcionando até as Etapas 4 e 5.
+const upcoming = [
+  { id: 'colecoes', label: 'Coleções', step: 4 },
+  { id: 'lentes', label: 'Lentes e tecnologias', step: 4 },
+  { id: 'sobre', label: 'Sobre o espaço', step: 5 },
+  { id: 'contato', label: 'Visite-nos', step: 5 },
+]
 
 export default function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center px-5 text-center">
-      <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-        {site.location}
-      </p>
-      <h1 className="mt-4 font-display text-[2.5rem] leading-[1.05] md:text-6xl">
-        Enxergue com clareza.{' '}
-        <em className="text-accent">Viva com estilo.</em>
-      </h1>
-      <p className="mt-5 max-w-md text-muted">{site.description}</p>
+    <>
       <a
-        href={whatsappLink()}
-        className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-[15px] font-semibold text-white transition-colors hover:bg-accent-strong"
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:text-white"
       >
-        Falar no WhatsApp
+        Pular para o conteúdo
       </a>
-      <p className="mt-10 text-xs text-muted">
-        Setup da Etapa 2 · {site.name} é uma marca fictícia de portfólio
-      </p>
-    </main>
+      <Header />
+      <main id="conteudo">
+        <Hero />
+        {upcoming.map((s, i) => (
+          <section
+            key={s.id}
+            id={s.id}
+            className={`flex min-h-[40vh] items-center justify-center px-5 ${i % 2 === 0 ? 'bg-surface' : 'bg-bg'}`}
+          >
+            <p className="text-sm text-muted">
+              {s.label}: em construção (Etapa {s.step})
+            </p>
+          </section>
+        ))}
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </>
   )
 }
