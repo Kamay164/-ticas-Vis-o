@@ -116,7 +116,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Fazer: criar projeto Vite + React + Tailwind, `.gitignore`, `README.md` inicial, tokens de design e fontes, `site.js` com dados fictícios, página mínima que renderiza.
   - Verificação: `npm install`, `npm run dev` abre sem erros e `npm run build` termina sem erros. Usuário faz o primeiro push e conecta o repositório na Vercel.
 
-- [ ] **Etapa 3: Header, Hero e rodapé base**
+- [x] **Etapa 3: Header, Hero e rodapé base**
   - Fazer: header fixo responsivo (menu mobile), Hero, rodapé e botão flutuante de WhatsApp.
   - Verificação: build sem erros; visual conferido em 375/768/1280px; links de âncora e WhatsApp funcionam; navegação por teclado ok.
 
@@ -234,6 +234,8 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Planejamento: aprovado.
 - Etapa 1: concluída e aprovada (`docs/design-brief.md`).
 - Etapa 2: concluída e aprovada.
-- Etapa 3: entregue (Header com menu mobile, Hero com ilustração no lugar da foto, Footer, botão flutuante de WhatsApp, seções temporárias com as âncoras), **aguardando aprovação do usuário**.
-- Pendente: plano de imagens (fotos ainda não escolhidas; `hero.image` em `site.js` está `null`).
+- Etapa 3: concluída e aprovada.
+- Etapa 4: entregue (Coleções, Lentes e tecnologias, Diferenciais, Marcas; ilustrações de traço no lugar das fotos), **aguardando aprovação do usuário**.
+- Pendente: plano de imagens (fotos ainda não escolhidas; campos `image` em `site.js` estão `null` e as seções mostram ilustração).
+- Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.

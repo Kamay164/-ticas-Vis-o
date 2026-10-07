@@ -63,6 +63,100 @@ export const footer = {
   developer: 'Vinicius',
 }
 
+export const collections = {
+  eyebrow: 'Coleções',
+  title: 'Encontre o seu',
+  highlight: 'estilo',
+  linkLabel: 'Quero ver modelos',
+  items: [
+    {
+      id: 'grau',
+      name: 'Óculos de grau',
+      text: 'Armações leves e elegantes para o seu dia a dia, com lentes sob medida.',
+      art: 'grau',
+      image: null, // ex.: { src: '/images/colecao-grau.webp', alt: '...', width: 800, height: 600 }
+    },
+    {
+      id: 'sol',
+      name: 'Óculos de sol',
+      text: 'Estilo e proteção UV para qualquer horário do dia.',
+      art: 'sol',
+      image: null,
+    },
+    {
+      id: 'contato',
+      name: 'Lentes de contato',
+      text: 'Conforto e praticidade, com orientação para o uso correto.',
+      art: 'contato',
+      image: null,
+    },
+    {
+      id: 'infantil',
+      name: 'Infantil',
+      text: 'Armações resistentes e coloridas, pensadas para crianças ativas.',
+      art: 'infantil',
+      image: null,
+    },
+    {
+      id: 'esportivo',
+      name: 'Esportivo',
+      text: 'Leves, firmes e confortáveis para treinar com segurança.',
+      art: 'esportivo',
+      image: null,
+    },
+  ],
+}
+
+export function collectionMessage(name) {
+  return `Olá! Gostaria de ver modelos de ${name.toLowerCase()}.`
+}
+
+export const lenses = {
+  eyebrow: 'Lentes e tecnologias',
+  title: 'Lentes que fazem',
+  highlight: 'diferença',
+  text: 'Cada lente é indicada para a sua rotina: trabalho no computador, direção, esporte ou o dia a dia.',
+  items: [
+    'Multifocais',
+    'Antirreflexo',
+    'Filtro de luz azul',
+    'Fotossensíveis',
+    'Proteção UV',
+    'Polarizadas',
+  ],
+  closingStart: 'Mais do que corrigir,',
+  closingHighlight: 'cuidar da sua visão.',
+}
+
+export const benefits = {
+  eyebrow: 'Por que a Óticas Visão',
+  title: 'Cuidado que você',
+  highlight: 'sente',
+  titleEnd: 'desde a primeira visita',
+  // Números de EXEMPLO (fictícios).
+  stats: [
+    { value: '+800', label: 'modelos' },
+    { value: '+30', label: 'marcas' },
+    { value: '15', label: 'anos de experiência' },
+  ],
+  items: [
+    'Atendimento personalizado',
+    'Ajuste de armação gratuito',
+    'Orientação na escolha das lentes',
+    'Garantia de adaptação',
+    'Parcelamento facilitado',
+  ],
+  image: null, // ex.: { src: '/images/diferenciais.webp', alt: '...', width: 900, height: 1100 }
+}
+
+export const brands = {
+  eyebrow: 'Marcas selecionadas',
+  title: 'Marcas que combinam com',
+  highlight: 'você',
+  // Nomes FICTÍCIOS (palavras comuns). Não usar marcas reais de óculos.
+  items: ['Arco', 'Linea', 'Nórdica', 'Ponte', 'Vértice', 'Brisa'],
+}
+
 export function whatsappLink(message = contact.whatsappMessage) {
   return `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(message)}`
 }
