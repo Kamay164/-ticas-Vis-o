@@ -95,7 +95,7 @@ Fora do escopo (não fazer): formulário de agendamento, carrinho, login, painel
 - Sem `console.log` esquecido, código morto ou comentários óbvios.
 
 **Imagens e licenças**
-- Use apenas imagens com licença livre (ex.: Unsplash, Pexels) ou placeholders. Registre a origem e o crédito em `README.md`. Antes de baixar imagens, mostre ao usuário o plano de quais usar. Não use fotos de marcas reais nem imagens copiadas das referências.
+- Use apenas imagens com licença livre (ex.: Unsplash, Pexels) ou placeholders. Registre a origem e o crédito em `README.md`. As fotos são colocadas pelo usuário em `src/assets/images/` (nomes em `site.js` e no README dessa pasta); o código usa `getImageUrl` e cai numa ilustração se o arquivo não existir. Não use fotos de marcas reais nem imagens copiadas das referências.
 
 **Economia de tokens**
 - Leia só os arquivos necessários para a etapa. Não releia o projeto inteiro a cada pedido.
@@ -120,7 +120,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Fazer: header fixo responsivo (menu mobile), Hero, rodapé e botão flutuante de WhatsApp.
   - Verificação: build sem erros; visual conferido em 375/768/1280px; links de âncora e WhatsApp funcionam; navegação por teclado ok.
 
-- [ ] **Etapa 4: Categorias, diferenciais, produtos e marcas**
+- [x] **Etapa 4: Categorias, diferenciais, produtos e marcas**
   - Fazer: seções 3 a 6 da seção 5, seguindo os componentes e tokens da Etapa 3.
   - Verificação: build sem erros; responsivo; todo texto vem de `site.js`; imagens com `alt` e otimizadas.
 
@@ -235,7 +235,8 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Etapa 1: concluída e aprovada (`docs/design-brief.md`).
 - Etapa 2: concluída e aprovada.
 - Etapa 3: concluída e aprovada.
-- Etapa 4: entregue (Coleções, Lentes e tecnologias, Diferenciais, Marcas; ilustrações de traço no lugar das fotos), **aguardando aprovação do usuário**.
-- Pendente: plano de imagens (fotos ainda não escolhidas; campos `image` em `site.js` estão `null` e as seções mostram ilustração).
+- Etapa 4: concluída e aprovada.
+- Etapa 5: entregue (Depoimentos, Sobre, Visite-nos com mapa e horários; fotos opcionais ligadas), **aguardando aprovação do usuário**.
+- Fotos: o ambiente de trabalho do Claude não acessa Unsplash/Pexels (bloqueio de rede). O usuário baixa as fotos e salva em `src/assets/images/` com os nomes de `src/assets/images/README.md`; o site as detecta sozinho. Pendente: usuário adicionar as fotos e preencher os créditos no README.
 - Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.

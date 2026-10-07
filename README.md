@@ -22,9 +22,19 @@ npm run lint
 - `docs/design-brief.md`: direção visual
 - `referencias/`: prints de referência
 
+## Imagens
+
+As fotos ficam em `src/assets/images/` (WebP, JPG ou PNG) e aparecem sozinhas quando o arquivo existe. Sem o arquivo, o site mostra uma ilustração no lugar.
+
+Nomes esperados: `hero`, `colecao-grau`, `colecao-sol`, `colecao-contato`, `colecao-infantil`, `colecao-esportivo`, `diferenciais` e `sobre`. Ajuste o texto alternativo de cada uma em `src/data/site.js` para descrever a foto escolhida.
+
 ## Créditos de imagens
 
-Serão listados aqui quando as imagens forem adicionadas.
+Preencha conforme as fotos forem adicionadas (somente fotos com licença livre, como Unsplash ou Pexels).
+
+| Arquivo | Autor | Fonte |
+|---|---|---|
+| hero | (a preencher) | (link) |
 
 ## Aviso
 

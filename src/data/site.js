@@ -52,9 +52,8 @@ export const hero = {
   secondaryCta: { label: 'Ver coleções', href: '#colecoes' },
   // Número de exemplo (fictício).
   badge: { value: '15 anos', label: 'cuidando do seu olhar' },
-  // Imagem do Hero: definida quando o plano de imagens for aprovado.
-  // Enquanto for null, o Hero mostra uma ilustração no lugar da foto.
-  image: null, // ex.: { src: '/images/hero.webp', alt: '...', width: 1200, height: 1500 }
+  // Foto: coloque src/assets/images/hero.webp (ou .jpg/.png). Sem o arquivo, aparece uma ilustração.
+  image: { name: 'hero', alt: 'Pessoa sorrindo usando óculos de grau' },
 }
 
 export const footer = {
@@ -74,35 +73,35 @@ export const collections = {
       name: 'Óculos de grau',
       text: 'Armações leves e elegantes para o seu dia a dia, com lentes sob medida.',
       art: 'grau',
-      image: null, // ex.: { src: '/images/colecao-grau.webp', alt: '...', width: 800, height: 600 }
+      image: { name: 'colecao-grau', alt: 'Armação de óculos de grau sobre superfície clara' },
     },
     {
       id: 'sol',
       name: 'Óculos de sol',
       text: 'Estilo e proteção UV para qualquer horário do dia.',
       art: 'sol',
-      image: null,
+      image: { name: 'colecao-sol', alt: 'Óculos de sol sobre superfície clara' },
     },
     {
       id: 'contato',
       name: 'Lentes de contato',
       text: 'Conforto e praticidade, com orientação para o uso correto.',
       art: 'contato',
-      image: null,
+      image: { name: 'colecao-contato', alt: 'Estojo e lentes de contato' },
     },
     {
       id: 'infantil',
       name: 'Infantil',
       text: 'Armações resistentes e coloridas, pensadas para crianças ativas.',
       art: 'infantil',
-      image: null,
+      image: { name: 'colecao-infantil', alt: 'Óculos infantil colorido' },
     },
     {
       id: 'esportivo',
       name: 'Esportivo',
       text: 'Leves, firmes e confortáveis para treinar com segurança.',
       art: 'esportivo',
-      image: null,
+      image: { name: 'colecao-esportivo', alt: 'Óculos esportivo' },
     },
   ],
 }
@@ -146,7 +145,7 @@ export const benefits = {
     'Garantia de adaptação',
     'Parcelamento facilitado',
   ],
-  image: null, // ex.: { src: '/images/diferenciais.webp', alt: '...', width: 900, height: 1100 }
+  image: { name: 'diferenciais', alt: 'Armação de óculos sobre pedestal claro' },
 }
 
 export const brands = {
@@ -155,6 +154,55 @@ export const brands = {
   highlight: 'você',
   // Nomes FICTÍCIOS (palavras comuns). Não usar marcas reais de óculos.
   items: ['Arco', 'Linea', 'Nórdica', 'Ponte', 'Vértice', 'Brisa'],
+}
+
+export const testimonials = {
+  eyebrow: 'Depoimentos',
+  title: 'Quem já',
+  highlight: 'enxerga melhor',
+  // Depoimentos e nomes FICTÍCIOS, apenas exemplos para o portfólio.
+  items: [
+    {
+      name: 'Mariana Costa',
+      text: 'Fui atendida sem pressa e saí com uma armação que combinou muito com meu rosto. Voltarei com certeza.',
+    },
+    {
+      name: 'Rafael Andrade',
+      text: 'Me explicaram cada opção de lente com calma e indicaram a que fazia sentido para o meu dia a dia.',
+    },
+    {
+      name: 'Helena Prado',
+      text: 'O ajuste ficou perfeito e a adaptação foi tranquila. Ambiente acolhedor e equipe atenciosa.',
+    },
+  ],
+}
+
+export const about = {
+  eyebrow: 'Sobre a ótica',
+  title: 'Um espaço feito para',
+  highlight: 'você ficar à vontade',
+  paragraphs: [
+    'Na Óticas Visão, escolher óculos não precisa ser corrido. Aqui você prova com calma, conversa com quem entende e tem ajuda para encontrar a armação que combina com o seu estilo e com a sua rotina.',
+    'O espaço foi pensado para ser claro e acolhedor, com café à disposição e atendimento que começa ouvindo o que você precisa.',
+  ],
+  cta: 'Conversar pelo WhatsApp',
+  image: { name: 'sobre', alt: 'Interior claro e acolhedor de uma ótica' },
+}
+
+export const location = {
+  eyebrow: 'Visite-nos',
+  title: 'Venha tomar um café e',
+  highlight: 'experimentar',
+  text: 'Estamos no bairro de Lourdes, em Belo Horizonte. Será um prazer receber você.',
+  hoursTitle: 'Horário de funcionamento',
+  // Mapa centrado no bairro (sem marcador), via OpenStreetMap (sem chave de API).
+  map: {
+    title: 'Mapa do bairro de Lourdes, em Belo Horizonte',
+    embedUrl:
+      'https://www.openstreetmap.org/export/embed.html?bbox=-43.9480%2C-19.9420%2C-43.9280%2C-19.9250&layer=mapnik',
+    linkUrl: 'https://www.openstreetmap.org/#map=16/-19.9335/-43.9380',
+    linkLabel: 'Abrir mapa maior',
+  },
 }
 
 export function whatsappLink(message = contact.whatsappMessage) {

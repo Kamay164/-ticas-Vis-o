@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import SectionHeading from './SectionHeading'
 import ProductArt from './ProductArt'
 import { collectionMessage, collections, whatsappLink } from '../data/site'
+import { getImageUrl } from '../data/images'
 
 // 3 cards na primeira linha e 2 maiores na segunda (desktop).
 const spans = [
@@ -29,18 +30,18 @@ export default function Collections() {
         />
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-6 md:mt-16 md:gap-6">
-          {items.map((item, i) => (
+          {items.map((item, i) => {
+            const src = getImageUrl(item.image.name)
+            return (
             <li key={item.id} className={spans[i] ?? ''}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-white transition-colors duration-300 focus-within:border-accent hover:border-accent">
                 <div
                   className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-surface to-[#e4ddd3] ${mediaAspect[i] ?? ''}`}
                 >
-                  {item.image ? (
+                  {src ? (
                     <img
-                      src={item.image.src}
+                      src={src}
                       alt={item.image.alt}
-                      width={item.image.width}
-                      height={item.image.height}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -71,7 +72,8 @@ export default function Collections() {
                 </div>
               </article>
             </li>
-          ))}
+            )
+          })}
         </ul>
       </div>
     </section>

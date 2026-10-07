@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import Button from './Button'
 import { hero, whatsappLink } from '../data/site'
+import { getImageUrl } from '../data/images'
 
 // Ilustração usada enquanto a foto do Hero não é definida.
 function HeroPlaceholder() {
@@ -19,6 +20,8 @@ function HeroPlaceholder() {
 }
 
 export default function Hero() {
+  const heroSrc = getImageUrl(hero.image.name)
+
   return (
     <section id="inicio" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28">
       <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 lg:grid-cols-[1.05fr_1fr] lg:gap-16 md:px-8">
@@ -60,12 +63,10 @@ export default function Hero() {
           </svg>
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-[var(--radius-media)] bg-surface">
-            {hero.image ? (
+            {heroSrc ? (
               <img
-                src={hero.image.src}
+                src={heroSrc}
                 alt={hero.image.alt}
-                width={hero.image.width}
-                height={hero.image.height}
                 fetchPriority="high"
                 className="h-full w-full object-cover"
               />

@@ -4,14 +4,11 @@ import Collections from './components/Collections'
 import Lenses from './components/Lenses'
 import Benefits from './components/Benefits'
 import Brands from './components/Brands'
+import Testimonials from './components/Testimonials'
+import About from './components/About'
+import Location from './components/Location'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
-
-// Seções temporárias: mantêm as âncoras do menu funcionando até a Etapa 5.
-const upcoming = [
-  { id: 'sobre', label: 'Sobre o espaço', step: 5 },
-  { id: 'contato', label: 'Visite-nos', step: 5 },
-]
 
 export default function App() {
   return (
@@ -29,17 +26,9 @@ export default function App() {
         <Lenses />
         <Benefits />
         <Brands />
-        {upcoming.map((s, i) => (
-          <section
-            key={s.id}
-            id={s.id}
-            className={`flex min-h-[40vh] items-center justify-center px-5 ${i % 2 === 0 ? 'bg-bg' : 'bg-surface'}`}
-          >
-            <p className="text-sm text-muted">
-              {s.label}: em construção (Etapa {s.step})
-            </p>
-          </section>
-        ))}
+        <Testimonials />
+        <About />
+        <Location />
       </main>
       <Footer />
       <WhatsAppButton />
