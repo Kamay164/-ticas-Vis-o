@@ -1,4 +1,5 @@
 import SectionHeading from './SectionHeading'
+import Reveal from './Reveal'
 import { brands } from '../data/site'
 
 export default function Brands() {
@@ -16,13 +17,15 @@ export default function Brands() {
         />
 
         <ul className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 text-center sm:grid-cols-3 lg:grid-cols-6 md:mt-14">
-          {items.map((name) => (
-            <li
+          {items.map((name, i) => (
+            <Reveal
+              as="li"
               key={name}
+              delay={i * 60}
               className="font-display text-3xl text-muted/80 transition-colors duration-300 hover:text-ink md:text-4xl"
             >
               {name}
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

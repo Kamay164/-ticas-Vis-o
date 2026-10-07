@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import SectionHeading from './SectionHeading'
 import ProductArt from './ProductArt'
+import Reveal from './Reveal'
 import { collectionMessage, collections, whatsappLink } from '../data/site'
 import { getImageUrl } from '../data/images'
 
@@ -33,7 +34,7 @@ export default function Collections() {
           {items.map((item, i) => {
             const src = getImageUrl(item.image.name)
             return (
-            <li key={item.id} className={spans[i] ?? ''}>
+            <Reveal as="li" key={item.id} delay={(i % 3) * 90} className={spans[i] ?? ''}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-white transition-colors duration-300 focus-within:border-accent hover:border-accent">
                 <div
                   className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-surface to-[#e4ddd3] ${mediaAspect[i] ?? ''}`}
@@ -71,7 +72,7 @@ export default function Collections() {
                   </a>
                 </div>
               </article>
-            </li>
+            </Reveal>
             )
           })}
         </ul>

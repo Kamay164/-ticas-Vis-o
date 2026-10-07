@@ -124,7 +124,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Fazer: seções 3 a 6 da seção 5, seguindo os componentes e tokens da Etapa 3.
   - Verificação: build sem erros; responsivo; todo texto vem de `site.js`; imagens com `alt` e otimizadas.
 
-- [ ] **Etapa 5: Depoimentos, Sobre, Visite-nos (mapa e horários) e acabamentos de conteúdo**
+- [x] **Etapa 5: Depoimentos, Sobre, Visite-nos (mapa e horários) e acabamentos de conteúdo**
   - Fazer: seções 7, 8 e 9, com depoimentos (scroll-snap no celular), mapa incorporado, tabela de horários e contatos fictícios.
   - Verificação: mapa carrega, tabela de horários legível no celular, telefone e WhatsApp clicáveis, build sem erros.
 
@@ -236,7 +236,9 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Etapa 2: concluída e aprovada.
 - Etapa 3: concluída e aprovada.
 - Etapa 4: concluída e aprovada.
-- Etapa 5: entregue (Depoimentos, Sobre, Visite-nos com mapa e horários; fotos opcionais ligadas), **aguardando aprovação do usuário**.
-- Fotos: o ambiente de trabalho do Claude não acessa Unsplash/Pexels (bloqueio de rede). O usuário baixa as fotos e salva em `src/assets/images/` com os nomes de `src/assets/images/README.md`; o site as detecta sozinho. Pendente: usuário adicionar as fotos e preencher os créditos no README.
+- Etapa 5: concluída e aprovada.
+- Etapa 6: entregue (hook `useReveal`, componente `Reveal`, fade + subida de 16px em todas as seções, respeita movimento reduzido; Hero sem animação no título e na foto), **aguardando aprovação do usuário**.
+- Fotos: o usuário já adicionou as 8 fotos em `src/assets/images/` (JPG originais de 0,7 a 8,5 MB, até 8000px de largura, ~21 MB no total). **Para a Etapa 7:** redimensionar e converter para WebP/AVIF (hero até 1600px, cards até 800px) e criar versões responsivas. Preencher os créditos no README.
+- Atenção (Etapa 7): algumas fotos parecem mostrar logotipos de marcas reais (ex.: óculos esportivo). Avisar o usuário para trocar ou recortar, pois a regra do projeto é não usar marcas reais.
 - Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.

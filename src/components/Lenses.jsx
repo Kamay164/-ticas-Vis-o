@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react'
 import SectionHeading from './SectionHeading'
+import Reveal from './Reveal'
 import { lenses } from '../data/site'
 
 export default function Lenses() {
@@ -36,20 +37,24 @@ export default function Lenses() {
         </SectionHeading>
 
         <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3 md:mt-14">
-          {items.map((item) => (
-            <li
+          {items.map((item, i) => (
+            <Reveal
+              as="li"
               key={item}
+              delay={i * 70}
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-ink"
             >
               <Check className="size-4 text-accent-strong" strokeWidth={2} aria-hidden="true" />
               {item}
-            </li>
+            </Reveal>
           ))}
         </ul>
 
-        <p className="mt-12 font-display text-2xl text-white md:mt-16 md:text-4xl">
-          {closingStart} <em className="text-accent">{closingHighlight}</em>
-        </p>
+        <Reveal delay={200}>
+          <p className="mt-12 font-display text-2xl text-white md:mt-16 md:text-4xl">
+            {closingStart} <em className="text-accent">{closingHighlight}</em>
+          </p>
+        </Reveal>
       </div>
     </section>
   )

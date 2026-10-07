@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Button from './Button'
+import Reveal from './Reveal'
 import { hero, whatsappLink } from '../data/site'
 import { getImageUrl } from '../data/images'
 
@@ -26,15 +27,19 @@ export default function Hero() {
     <section id="inicio" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28">
       <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 lg:grid-cols-[1.05fr_1fr] lg:gap-16 md:px-8">
         <div className="max-w-xl">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted md:text-[13px]">
-            {hero.eyebrow}
-          </p>
+          <Reveal>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted md:text-[13px]">
+              {hero.eyebrow}
+            </p>
+          </Reveal>
           <h1 className="mt-5 font-display text-[2.75rem] leading-[1.05] text-ink md:text-[4rem] lg:text-[4.25rem]">
             {hero.titleStart} <em className="text-accent">{hero.titleHighlight}</em>
           </h1>
-          <p className="mt-6 max-w-md text-base text-muted md:text-[17px]">{hero.text}</p>
+          <Reveal delay={120}>
+            <p className="mt-6 max-w-md text-base text-muted md:text-[17px]">{hero.text}</p>
+          </Reveal>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <Reveal delay={240} className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button
               href={whatsappLink(hero.primaryCta.message)}
               variant="accent"
@@ -46,7 +51,7 @@ export default function Hero() {
             <Button href={hero.secondaryCta.href} variant="outline" icon={ArrowRight}>
               {hero.secondaryCta.label}
             </Button>
-          </div>
+          </Reveal>
         </div>
 
         <div className="relative mx-auto w-full max-w-[400px] lg:max-w-[460px]">
@@ -68,6 +73,7 @@ export default function Hero() {
                 src={heroSrc}
                 alt={hero.image.alt}
                 fetchPriority="high"
+                style={{ objectPosition: hero.image.focus }}
                 className="h-full w-full object-cover"
               />
             ) : (
@@ -75,10 +81,13 @@ export default function Hero() {
             )}
           </div>
 
-          <div className="absolute -bottom-5 left-4 rounded-[var(--radius-card)] border border-line bg-white px-5 py-3.5 shadow-[0_8px_24px_-12px_rgba(28,27,25,0.18)] lg:-left-8">
+          <Reveal
+            delay={360}
+            className="absolute -bottom-5 left-4 rounded-[var(--radius-card)] border border-line bg-white px-5 py-3.5 shadow-[0_8px_24px_-12px_rgba(28,27,25,0.18)] lg:-left-8"
+          >
             <p className="font-display text-3xl leading-none text-ink">{hero.badge.value}</p>
             <p className="mt-1 text-sm text-muted">{hero.badge.label}</p>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

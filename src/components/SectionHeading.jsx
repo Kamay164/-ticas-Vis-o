@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 // Padrão de título do brief: eyebrow pequeno e espaçado + título com uma palavra em itálico no destaque.
 export default function SectionHeading({
   id,
@@ -13,7 +15,7 @@ export default function SectionHeading({
   const centered = align === 'center'
 
   return (
-    <div className={centered ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}>
+    <Reveal className={centered ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}>
       <p
         className={`text-xs font-medium uppercase tracking-[0.2em] md:text-[13px] ${
           isLight ? 'text-white/70' : 'text-muted'
@@ -35,6 +37,6 @@ export default function SectionHeading({
           {children}
         </p>
       )}
-    </div>
+    </Reveal>
   )
 }

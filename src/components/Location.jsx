@@ -1,6 +1,7 @@
 import { Clock, ExternalLink, MapPin, MessageCircle, Phone } from 'lucide-react'
 import SectionHeading from './SectionHeading'
 import Button from './Button'
+import Reveal from './Reveal'
 import { contact, hours, location, whatsappLink } from '../data/site'
 
 export default function Location() {
@@ -15,7 +16,7 @@ export default function Location() {
         </SectionHeading>
 
         <div className="mt-12 grid gap-10 md:mt-16 lg:grid-cols-[1fr_1.25fr] lg:gap-14">
-          <div className="space-y-8">
+          <Reveal className="space-y-8">
             <address className="space-y-4 not-italic">
               <p className="flex items-start gap-3 text-base text-ink">
                 <MapPin className="mt-1 size-5 shrink-0 text-accent-strong" strokeWidth={1.5} aria-hidden="true" />
@@ -63,9 +64,9 @@ export default function Location() {
             >
               Falar pelo WhatsApp
             </Button>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={120}>
             <div className="aspect-[4/3] overflow-hidden rounded-[var(--radius-media)] border border-line bg-surface lg:aspect-auto lg:h-full lg:min-h-[440px]">
               <iframe
                 title={map.title}
@@ -84,7 +85,7 @@ export default function Location() {
               {map.linkLabel}
               <ExternalLink className="size-3.5" strokeWidth={1.75} aria-hidden="true" />
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

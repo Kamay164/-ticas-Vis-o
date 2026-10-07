@@ -53,7 +53,8 @@ export const hero = {
   // Número de exemplo (fictício).
   badge: { value: '15 anos', label: 'cuidando do seu olhar' },
   // Foto: coloque src/assets/images/hero.webp (ou .jpg/.png). Sem o arquivo, aparece uma ilustração.
-  image: { name: 'hero', alt: 'Pessoa sorrindo usando óculos de grau' },
+  // focus: posição do recorte (object-position). Aqui a pessoa fica à esquerda da foto original.
+  image: { name: 'hero', alt: 'Mulher sorrindo usando óculos de grau', focus: '20% center' },
 }
 
 export const footer = {
@@ -73,35 +74,35 @@ export const collections = {
       name: 'Óculos de grau',
       text: 'Armações leves e elegantes para o seu dia a dia, com lentes sob medida.',
       art: 'grau',
-      image: { name: 'colecao-grau', alt: 'Armação de óculos de grau sobre superfície clara' },
+      image: { name: 'colecao-grau', alt: 'Armação de óculos de grau sobre fundo claro' },
     },
     {
       id: 'sol',
       name: 'Óculos de sol',
       text: 'Estilo e proteção UV para qualquer horário do dia.',
       art: 'sol',
-      image: { name: 'colecao-sol', alt: 'Óculos de sol sobre superfície clara' },
+      image: { name: 'colecao-sol', alt: 'Óculos de sol sobre uma prateleira clara' },
     },
     {
       id: 'contato',
       name: 'Lentes de contato',
       text: 'Conforto e praticidade, com orientação para o uso correto.',
       art: 'contato',
-      image: { name: 'colecao-contato', alt: 'Estojo e lentes de contato' },
+      image: { name: 'colecao-contato', alt: 'Pessoa colocando uma lente de contato' },
     },
     {
       id: 'infantil',
       name: 'Infantil',
       text: 'Armações resistentes e coloridas, pensadas para crianças ativas.',
       art: 'infantil',
-      image: { name: 'colecao-infantil', alt: 'Óculos infantil colorido' },
+      image: { name: 'colecao-infantil', alt: 'Armação de óculos com hastes amarelas' },
     },
     {
       id: 'esportivo',
       name: 'Esportivo',
       text: 'Leves, firmes e confortáveis para treinar com segurança.',
       art: 'esportivo',
-      image: { name: 'colecao-esportivo', alt: 'Óculos esportivo' },
+      image: { name: 'colecao-esportivo', alt: 'Óculos esportivo com lentes espelhadas' },
     },
   ],
 }
@@ -145,7 +146,7 @@ export const benefits = {
     'Garantia de adaptação',
     'Parcelamento facilitado',
   ],
-  image: { name: 'diferenciais', alt: 'Armação de óculos sobre pedestal claro' },
+  image: { name: 'diferenciais', alt: 'Mãos segurando uma armação de óculos' },
 }
 
 export const brands = {
@@ -186,7 +187,7 @@ export const about = {
     'O espaço foi pensado para ser claro e acolhedor, com café à disposição e atendimento que começa ouvindo o que você precisa.',
   ],
   cta: 'Conversar pelo WhatsApp',
-  image: { name: 'sobre', alt: 'Interior claro e acolhedor de uma ótica' },
+  image: { name: 'sobre', alt: 'Atendimento em uma ótica, com uma mãe e o filho escolhendo óculos' },
 }
 
 export const location = {
