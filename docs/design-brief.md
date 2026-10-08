@@ -31,7 +31,7 @@ O que **não** vamos repetir: logotipo, ícones de estrela/brilho, textos, nomes
 | `ink` | `#1C1B19` | Texto principal, botão primário, rodapé |
 | `muted` | `#6B6862` | Texto secundário |
 | `line` | `#DDD7CF` | Bordas e divisores |
-| `accent` | `#A6845C` | Detalhes decorativos, ícones, palavras em destaque grandes |
+| `accent` | `#9E7D55` | Detalhes decorativos, ícones, palavras em destaque grandes (ajustado na Etapa 7, era `#A6845C`, para passar 3:1 sobre `surface`) |
 | `accent-strong` | `#8A6A45` | Botão de destaque (texto branco) |
 | `accent-text` | `#7A5C3B` | Links e textos pequenos em destaque |
 
@@ -42,7 +42,7 @@ Contraste (WCAG) conferido:
 - Branco sobre `accent-strong`: 5,0:1.
 - `accent-text` sobre `bg`: 5,8:1.
 
-**Regra:** `accent` (3,3:1) só aparece em decoração ou em texto grande (24px ou mais); nunca em texto pequeno.
+**Regra:** `accent` (3,2:1 sobre `surface`, 3,6:1 sobre `bg`) só aparece em decoração ou em texto grande (24px ou mais); nunca em texto pequeno.
 
 ## 4. Tipografia (Google Fonts, gratuitas)
 

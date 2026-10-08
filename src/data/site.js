@@ -52,9 +52,9 @@ export const hero = {
   secondaryCta: { label: 'Ver coleções', href: '#colecoes' },
   // Número de exemplo (fictício).
   badge: { value: '15 anos', label: 'cuidando do seu olhar' },
-  // Foto: coloque src/assets/images/hero.webp (ou .jpg/.png). Sem o arquivo, aparece uma ilustração.
-  // focus: posição do recorte (object-position). Aqui a pessoa fica à esquerda da foto original.
-  image: { name: 'hero', alt: 'Mulher sorrindo usando óculos de grau', focus: '20% center' },
+  // Foto: src/assets/images/hero-480.webp e hero-960.webp (já recortadas em 4:5).
+  // Opcional: focus ajusta o recorte (object-position), ex.: focus: '20% center'.
+  image: { name: 'hero', alt: 'Mulher sorrindo usando óculos de grau' },
 }
 
 export const footer = {

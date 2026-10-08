@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Fotos originais em alta resolução (o site usa as versões WebP de src/assets/images)
+fotos-originais/

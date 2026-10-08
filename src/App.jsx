@@ -31,7 +31,9 @@ export default function App() {
         <Location />
       </main>
       <Footer />
-      <WhatsAppButton />
+      <aside aria-label="Contato rápido">
+        <WhatsAppButton />
+      </aside>
     </>
   )
 }

@@ -22,7 +22,7 @@ export default function Logo({ tone = 'dark', className = '' }) {
           }`}
         >
           Óticas
-        </span>
+        </span>{' '}
         <span className={`font-display text-2xl ${isLight ? 'text-white' : 'text-ink'}`}>
           Visão
         </span>

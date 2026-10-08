@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import Button from './Button'
@@ -7,6 +7,8 @@ import { navLinks, whatsappLink } from '../data/site'
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const toggleRef = useRef(null)
+  const menuRef = useRef(null)
 
   // Header ganha fundo e borda depois de rolar um pouco.
   useEffect(() => {
@@ -16,15 +18,28 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Menu mobile: trava a rolagem da página e fecha com Esc.
+  // Menu mobile: trava a rolagem, fecha com Esc, leva o foco para o menu
+  // e deixa o resto da página inerte (teclado e leitor de tela ficam só no menu).
   useEffect(() => {
     if (!open) return
+    const toggle = toggleRef.current
+    const background = [
+      document.getElementById('conteudo'),
+      document.querySelector('footer'),
+      document.getElementById('whatsapp-flutuante'),
+    ]
     const onKey = (e) => e.key === 'Escape' && setOpen(false)
+
     document.body.style.overflow = 'hidden'
+    background.forEach((el) => el?.setAttribute('inert', ''))
     window.addEventListener('keydown', onKey)
+    menuRef.current?.querySelector('a')?.focus()
+
     return () => {
       document.body.style.overflow = ''
+      background.forEach((el) => el?.removeAttribute('inert'))
       window.removeEventListener('keydown', onKey)
+      toggle?.focus({ preventScroll: true })
     }
   }, [open])
 
@@ -70,6 +85,7 @@ export default function Header() {
           </div>
 
           <button
+            ref={toggleRef}
             type="button"
             className="-mr-2 inline-flex size-11 items-center justify-center rounded-full text-ink md:hidden"
             aria-expanded={open}
@@ -84,6 +100,7 @@ export default function Header() {
 
       {open && (
         <nav
+          ref={menuRef}
           id="menu-mobile"
           aria-label="Menu"
           className="fixed inset-x-0 top-18 bottom-0 z-40 flex flex-col bg-bg px-5 pt-6 pb-10 md:hidden"

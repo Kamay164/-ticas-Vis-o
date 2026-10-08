@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
+/* Fontes hospedadas no próprio site (public/fonts, licença SIL OFL), sem depender do Google Fonts. */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/manrope-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-latin-400-italic.woff2") format("woff2");
+}
+
 /* Tokens de design (docs/design-brief.md). Gera classes como bg-bg, text-ink, bg-accent-strong, font-display. */
 @theme {
   --color-bg: #faf8f5;
@@ -8,7 +45,7 @@
   --color-ink: #1c1b19;
   --color-muted: #6b6862;
   --color-line: #ddd7cf;
-  --color-accent: #a6845c; /* só decoração ou texto grande (contraste 3,3:1) */
+  --color-accent: #9e7d55; /* só decoração ou texto grande: 3,2:1 em surface, 3,6:1 em bg, 4,5:1 em ink */
   --color-accent-strong: #8a6a45;
   --color-accent-text: #7a5c3b;
 

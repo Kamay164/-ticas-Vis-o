@@ -3,7 +3,7 @@ import SectionHeading from './SectionHeading'
 import ProductArt from './ProductArt'
 import Reveal from './Reveal'
 import { collectionMessage, collections, whatsappLink } from '../data/site'
-import { getImageUrl } from '../data/images'
+import { getImage } from '../data/images'
 
 // 3 cards na primeira linha e 2 maiores na segunda (desktop).
 const spans = [
@@ -32,16 +32,21 @@ export default function Collections() {
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-6 md:mt-16 md:gap-6">
           {items.map((item, i) => {
-            const src = getImageUrl(item.image.name)
+            const photo = getImage(item.image.name)
             return (
             <Reveal as="li" key={item.id} delay={(i % 3) * 90} className={spans[i] ?? ''}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-white transition-colors duration-300 focus-within:border-accent hover:border-accent">
                 <div
                   className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-surface to-[#e4ddd3] ${mediaAspect[i] ?? ''}`}
                 >
-                  {src ? (
+                  {photo ? (
                     <img
-                      src={src}
+                      src={photo.src}
+                      srcSet={photo.srcSet}
+                      sizes="(min-width: 1024px) 560px, (min-width: 640px) 50vw, 100vw"
+                      width={1200}
+                      height={900}
+                      decoding="async"
                       alt={item.image.alt}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

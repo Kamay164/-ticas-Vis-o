@@ -5,6 +5,7 @@ import { whatsappLink } from '../data/site'
 export default function WhatsAppButton() {
   return (
     <a
+      id="whatsapp-flutuante"
       href={whatsappLink()}
       target="_blank"
       rel="noopener noreferrer"

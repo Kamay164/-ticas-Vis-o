@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import Button from './Button'
 import Reveal from './Reveal'
 import { hero, whatsappLink } from '../data/site'
-import { getImageUrl } from '../data/images'
+import { getImage } from '../data/images'
 
 // Ilustração usada enquanto a foto do Hero não é definida.
 function HeroPlaceholder() {
@@ -21,7 +21,7 @@ function HeroPlaceholder() {
 }
 
 export default function Hero() {
-  const heroSrc = getImageUrl(hero.image.name)
+  const photo = getImage(hero.image.name)
 
   return (
     <section id="inicio" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-28">
@@ -68,12 +68,16 @@ export default function Hero() {
           </svg>
 
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-[var(--radius-media)] bg-surface">
-            {heroSrc ? (
+            {photo ? (
               <img
-                src={heroSrc}
+                src={photo.src}
+                srcSet={photo.srcSet}
+                sizes="(min-width: 1024px) 460px, min(400px, 90vw)"
                 alt={hero.image.alt}
+                width={960}
+                height={1200}
                 fetchPriority="high"
-                style={{ objectPosition: hero.image.focus }}
+                style={hero.image.focus ? { objectPosition: hero.image.focus } : undefined}
                 className="h-full w-full object-cover"
               />
             ) : (

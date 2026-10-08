@@ -4,11 +4,11 @@ import ProductArt from './ProductArt'
 import Button from './Button'
 import Reveal from './Reveal'
 import { about, whatsappLink } from '../data/site'
-import { getImageUrl } from '../data/images'
+import { getImage } from '../data/images'
 
 export default function About() {
   const { eyebrow, title, highlight, paragraphs, cta, image } = about
-  const src = getImageUrl(image.name)
+  const photo = getImage(image.name)
 
   return (
     <section id="sobre" aria-labelledby="sobre-titulo" className="bg-surface py-16 md:py-28">
@@ -34,8 +34,18 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={120} className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-media)] bg-gradient-to-b from-[#f6f3ee] to-[#e4ddd3] lg:order-first">
-          {src ? (
-            <img src={src} alt={image.alt} loading="lazy" className="h-full w-full object-cover" />
+          {photo ? (
+            <img
+              src={photo.src}
+              srcSet={photo.srcSet}
+              sizes="(min-width: 1024px) 530px, 100vw"
+              alt={image.alt}
+              width={1600}
+              height={1067}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
               <ProductArt type="infantil" className="w-3/5 text-accent-strong/60" />

@@ -3,19 +3,24 @@ import SectionHeading from './SectionHeading'
 import ProductArt from './ProductArt'
 import Reveal from './Reveal'
 import { benefits } from '../data/site'
-import { getImageUrl } from '../data/images'
+import { getImage } from '../data/images'
 
 export default function Benefits() {
   const { eyebrow, title, highlight, titleEnd, stats, items, image } = benefits
-  const src = getImageUrl(image.name)
+  const photo = getImage(image.name)
 
   return (
     <section id="diferenciais" aria-labelledby="diferenciais-titulo" className="py-16 md:py-28">
       <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-5 md:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-media)] bg-gradient-to-b from-surface to-[#e4ddd3] lg:aspect-[4/5]">
-          {src ? (
+          {photo ? (
             <img
-              src={src}
+              src={photo.src}
+              srcSet={photo.srcSet}
+              sizes="(min-width: 1024px) 530px, 100vw"
+              width={1600}
+              height={1066}
+              decoding="async"
               alt={image.alt}
               loading="lazy"
               className="h-full w-full object-cover"

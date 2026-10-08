@@ -27,7 +27,11 @@ export default function Testimonials() {
 
         {/* Celular: rolagem horizontal com snap. Desktop: grade de 3 colunas. */}
         {/* A lista inteira entra de uma vez: no celular os cards ficam fora da tela e rolam na horizontal. */}
-        <Reveal as="ul" className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:mt-16 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <Reveal
+          as="ul"
+          tabIndex={0}
+          aria-label="Depoimentos de clientes"
+          className="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:mt-16 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {items.map((item) => (
             <li key={item.name} className="w-[82%] shrink-0 snap-center sm:w-[60%] md:w-auto">
               <figure className="flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-white p-7">

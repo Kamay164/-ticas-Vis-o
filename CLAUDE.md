@@ -95,7 +95,7 @@ Fora do escopo (não fazer): formulário de agendamento, carrinho, login, painel
 - Sem `console.log` esquecido, código morto ou comentários óbvios.
 
 **Imagens e licenças**
-- Use apenas imagens com licença livre (ex.: Unsplash, Pexels) ou placeholders. Registre a origem e o crédito em `README.md`. As fotos são colocadas pelo usuário em `src/assets/images/` (nomes em `site.js` e no README dessa pasta); o código usa `getImageUrl` e cai numa ilustração se o arquivo não existir. Não use fotos de marcas reais nem imagens copiadas das referências.
+- Use apenas imagens com licença livre (ex.: Unsplash, Pexels) ou placeholders. Registre a origem e o crédito em `README.md`. As fotos ficam em `src/assets/images/` como WebP em duas larguras (`nome-<largura>.webp`, ver o README dessa pasta); o código usa `getImage` e cai numa ilustração se o arquivo não existir. Não use fotos de marcas reais nem imagens copiadas das referências.
 
 **Economia de tokens**
 - Leia só os arquivos necessários para a etapa. Não releia o projeto inteiro a cada pedido.
@@ -128,7 +128,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Fazer: seções 7, 8 e 9, com depoimentos (scroll-snap no celular), mapa incorporado, tabela de horários e contatos fictícios.
   - Verificação: mapa carrega, tabela de horários legível no celular, telefone e WhatsApp clicáveis, build sem erros.
 
-- [ ] **Etapa 6: Animações de entrada ao rolar**
+- [x] **Etapa 6: Animações de entrada ao rolar**
   - Fazer: hook `useReveal` com IntersectionObserver e classes de transição; aplicar nas seções.
   - Verificação: animações suaves e discretas; com "reduzir movimento" ativado no sistema elas são desligadas; sem layout shift; build sem erros.
 
@@ -237,8 +237,8 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Etapa 3: concluída e aprovada.
 - Etapa 4: concluída e aprovada.
 - Etapa 5: concluída e aprovada.
-- Etapa 6: entregue (hook `useReveal`, componente `Reveal`, fade + subida de 16px em todas as seções, respeita movimento reduzido; Hero sem animação no título e na foto), **aguardando aprovação do usuário**.
-- Fotos: o usuário já adicionou as 8 fotos em `src/assets/images/` (JPG originais de 0,7 a 8,5 MB, até 8000px de largura, ~21 MB no total). **Para a Etapa 7:** redimensionar e converter para WebP/AVIF (hero até 1600px, cards até 800px) e criar versões responsivas. Preencher os créditos no README.
-- Atenção (Etapa 7): algumas fotos parecem mostrar logotipos de marcas reais (ex.: óculos esportivo). Avisar o usuário para trocar ou recortar, pois a regra do projeto é não usar marcas reais.
+- Etapa 6: concluída e aprovada.
+- Etapa 7: entregue, **aguardando aprovação do usuário**. Lighthouse mobile local: Performance 98, Acessibilidade 100, Boas práticas 100, SEO 100; axe sem violações. Feito: fotos em WebP responsivo (`nome-<largura>.webp`, `getImage` em `src/data/images.js`, ~430 KB no total) com marcas reais removidas; fontes hospedadas em `public/fonts`; meta tags/Open Graph/`og-image.jpg`/`apple-touch-icon.png`/`robots.txt`; URL absoluta via `VERCEL_PROJECT_PRODUCTION_URL` (ou `VITE_SITE_URL`) no `vite.config.js`; menu mobile com foco e `inert`; cor `accent` ajustada para `#9E7D55`.
+- Pendente do usuário: mover os JPG originais de `src/assets/images/` para `fotos-originais/` (ignorada pelo git), preencher créditos das fotos no README, conferir o Lighthouse no link da Vercel.
 - Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.
