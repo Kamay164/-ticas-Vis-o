@@ -3,10 +3,6 @@
 
 export const site = {
   name: 'Óticas Visão',
-  tagline: 'Enxergue com clareza. Viva com estilo.',
-  description:
-    'Armações selecionadas, lentes de alta tecnologia e um atendimento que começa ouvindo você.',
-  location: 'Lourdes · Belo Horizonte',
 }
 
 export const contact = {
@@ -21,9 +17,8 @@ export const contact = {
     city: 'Belo Horizonte',
     state: 'MG',
   },
-  // Perfil fictício (placeholder).
+  // Perfil fictício: aparece só como texto, sem link.
   instagram: '@oticasvisao',
-  instagramUrl: '#',
 }
 
 export const hours = [

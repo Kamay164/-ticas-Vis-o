@@ -14,7 +14,7 @@ export default function Footer() {
     },
     { icon: Phone, label: contact.phone, href: contact.phoneHref },
     { icon: MessageCircle, label: 'WhatsApp', href: whatsappLink(), external: true },
-    { icon: AtSign, label: contact.instagram, href: contact.instagramUrl },
+    { icon: AtSign, label: contact.instagram },
   ]
 
   return (

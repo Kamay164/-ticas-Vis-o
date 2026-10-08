@@ -132,7 +132,7 @@ Cada etapa tem entregável e verificação. Só marque como concluída depois qu
   - Fazer: hook `useReveal` com IntersectionObserver e classes de transição; aplicar nas seções.
   - Verificação: animações suaves e discretas; com "reduzir movimento" ativado no sistema elas são desligadas; sem layout shift; build sem erros.
 
-- [ ] **Etapa 7: Qualidade (QA), acessibilidade, performance e SEO**
+- [x] **Etapa 7: Qualidade (QA), acessibilidade, performance e SEO**
   - Fazer: revisar responsividade, contraste, foco, `alt`, meta tags, Open Graph, favicon, `lang="pt-BR"`, otimização de imagens e fontes.
   - Verificação: Lighthouse mobile em produção ou preview com metas Performance ≥ 90, Acessibilidade ≥ 95, Boas práticas ≥ 90, SEO ≥ 90; sem erros no console; relatório curto das correções.
 
@@ -238,8 +238,10 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Etapa 4: concluída e aprovada.
 - Etapa 5: concluída e aprovada.
 - Etapa 6: concluída e aprovada.
-- Etapa 7: entregue, **aguardando aprovação do usuário**. Lighthouse mobile local: Performance 98, Acessibilidade 100, Boas práticas 100, SEO 100; axe sem violações. Feito: fotos em WebP responsivo (`nome-<largura>.webp`, `getImage` em `src/data/images.js`, ~430 KB no total) com marcas reais removidas; fontes hospedadas em `public/fonts`; meta tags/Open Graph/`og-image.jpg`/`apple-touch-icon.png`/`robots.txt`; URL absoluta via `VERCEL_PROJECT_PRODUCTION_URL` (ou `VITE_SITE_URL`) no `vite.config.js`; menu mobile com foco e `inert`; cor `accent` ajustada para `#9E7D55`.
+- Etapa 7: concluída e aprovada (Lighthouse mobile local: 98/100/100/100).
 - Ajuste extra (pedido do usuário antes da Etapa 8): mapa trocado de OpenStreetMap para incorporação do Google Maps sem chave de API (`maps.google.com/maps?...&output=embed`), buscando só o bairro (sem endereço/marcador de negócio). URL montada em `Location.jsx` a partir de `location.map` em `site.js`.
-- Pendente do usuário: mover os JPG originais de `src/assets/images/` para `fotos-originais/` (ignorada pelo git), preencher créditos das fotos no README, conferir o Lighthouse no link da Vercel.
+- Etapa 8: entregue, **aguardando aprovação do usuário**. README de portfólio com prints em `docs/screenshots/`, limpeza (dados sem uso removidos de `site.js`, link falso do Instagram virou texto, `package.json` na versão 1.0.0), site publicado conferido (mapa do Google, fotos, fontes, canonical/Open Graph absolutos, sem erros no console).
+- Pendente do usuário: preencher os créditos das fotos no README; rodar o Lighthouse no link da Vercel.
+- Site publicado: https://ticas-vis-o.vercel.app
 - Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.
