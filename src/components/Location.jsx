@@ -7,6 +7,9 @@ import { contact, hours, location, whatsappLink } from '../data/site'
 export default function Location() {
   const { eyebrow, title, highlight, text, hoursTitle, map } = location
   const { address } = contact
+  const mapQuery = encodeURIComponent(map.query)
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${mapQuery}&z=${map.zoom}&hl=pt-BR&output=embed`
+  const mapLinkUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`
 
   return (
     <section id="contato" aria-labelledby="contato-titulo" className="py-16 md:py-28">
@@ -70,14 +73,15 @@ export default function Location() {
             <div className="aspect-[4/3] overflow-hidden rounded-[var(--radius-media)] border border-line bg-surface lg:aspect-auto lg:h-full lg:min-h-[440px]">
               <iframe
                 title={map.title}
-                src={map.embedUrl}
+                src={mapEmbedUrl}
                 loading="lazy"
-                referrerPolicy="no-referrer"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className="h-full w-full border-0 [filter:grayscale(.35)_contrast(.95)]"
               />
             </div>
             <a
-              href={map.linkUrl}
+              href={mapLinkUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-text"

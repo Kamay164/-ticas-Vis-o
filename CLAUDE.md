@@ -239,6 +239,7 @@ Se o assistente pulou arquivos, não rodou o build ou parou no meio: **aumente o
 - Etapa 5: concluída e aprovada.
 - Etapa 6: concluída e aprovada.
 - Etapa 7: entregue, **aguardando aprovação do usuário**. Lighthouse mobile local: Performance 98, Acessibilidade 100, Boas práticas 100, SEO 100; axe sem violações. Feito: fotos em WebP responsivo (`nome-<largura>.webp`, `getImage` em `src/data/images.js`, ~430 KB no total) com marcas reais removidas; fontes hospedadas em `public/fonts`; meta tags/Open Graph/`og-image.jpg`/`apple-touch-icon.png`/`robots.txt`; URL absoluta via `VERCEL_PROJECT_PRODUCTION_URL` (ou `VITE_SITE_URL`) no `vite.config.js`; menu mobile com foco e `inert`; cor `accent` ajustada para `#9E7D55`.
+- Ajuste extra (pedido do usuário antes da Etapa 8): mapa trocado de OpenStreetMap para incorporação do Google Maps sem chave de API (`maps.google.com/maps?...&output=embed`), buscando só o bairro (sem endereço/marcador de negócio). URL montada em `Location.jsx` a partir de `location.map` em `site.js`.
 - Pendente do usuário: mover os JPG originais de `src/assets/images/` para `fotos-originais/` (ignorada pelo git), preencher créditos das fotos no README, conferir o Lighthouse no link da Vercel.
 - Marcas fictícias atuais: Arco, Linea, Nórdica, Ponte, Vértice, Brisa ("Halo" foi trocada por existir como marca real). Conferir antes da publicação.
 - Quando o usuário pedir uma etapa, confirme em uma linha qual etapa vai executar e comece.

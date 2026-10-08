@@ -196,13 +196,13 @@ export const location = {
   highlight: 'experimentar',
   text: 'Estamos no bairro de Lourdes, em Belo Horizonte. Será um prazer receber você.',
   hoursTitle: 'Horário de funcionamento',
-  // Mapa centrado no bairro (sem marcador), via OpenStreetMap (sem chave de API).
+  // Mapa do Google (incorporação sem chave de API), centrado no bairro.
+  // A busca é pelo bairro, não por um endereço, para não apontar para nenhum negócio real.
   map: {
     title: 'Mapa do bairro de Lourdes, em Belo Horizonte',
-    embedUrl:
-      'https://www.openstreetmap.org/export/embed.html?bbox=-43.9480%2C-19.9420%2C-43.9280%2C-19.9250&layer=mapnik',
-    linkUrl: 'https://www.openstreetmap.org/#map=16/-19.9335/-43.9380',
-    linkLabel: 'Abrir mapa maior',
+    query: 'Lourdes, Belo Horizonte - MG',
+    zoom: 15,
+    linkLabel: 'Abrir no Google Maps',
   },
 }
 
